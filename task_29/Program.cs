@@ -18,12 +18,13 @@ int clamp(int num){
 }
 
 int place_in_line(int[] line, int height){
+    int place = 1;
     for (int i = 0; i < line.Length; i++){
-        if (height > line[i]){
-            return i + 1;
+        if (line[i] >= height){
+            place += 1;
         }
     }
-    return line.Length + 1;
+    return place;
 }
 
 Console.Write("input schoolboys amount: ");
